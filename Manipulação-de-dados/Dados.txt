@@ -1,0 +1,18 @@
+Cite três exemplos de dados utilizados no seu cotidiano (exemplo: termômetro) e pesquise três outros exemplos em que dados na internet são usados (exemplo: criação de um usuário em rede social digital).
+
+        -  - C O T I D I A N O - - 
+
+1. Quantidade de faltas em uma disciplina;
+2. O saldo da conta bancária;
+3. A hora(O tempo todo, rsrs).
+
+
+        -  - I N T E R N E T -  - 
+
+1. O IP de um computador pode ser utilizado para localizar o dispositivo e informar qual é o tipo de dispositivo(smartphone, computador, tablet, etc);
+2. O ID(@) de um usuário do Twitter que serve para diferenciar um usuário de outro, além de localizá-los;
+3. Os dados das pesquisas e curtidas dos usuários das rede sociais são utilizados para direcionar propaganda persolizada.
+
+
+
+
