@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média 2</title>
+</head>
+<body>
+    
+    <script>
+        /* 
+        Crie dois códigos de sistema de notas para uma escola. O primeiro código deve ser um programa que informa se o aluno reprovou, ou não, com base nas três notas que ele adicionou ao programa. Utilize, no mínimo, um operador de atribuição e um operador ternário. 
+        O segundo código é um programa que o aluno deve escrever duas notas e o retorno informa a nota mínima que ele deve tirar na próxima prova para poder passar com nota sete.*/
+        let nota1 = parseFloat(prompt("Informe a primeira nota: "));
+        let nota2 = parseFloat(prompt("Informe a segunda nota: "));
+        let media = nota1 + nota2;
+        let qntFalta = media - 21;
+        
+        //If que informa se o aluno já está reprovado. Se a nota for menor que 11 ele não consegue recuperar na terceira avaliação
+        if(media < 11){
+
+            alert("O aluno já está reprovado!")
+        
+        // If que verifica se a diferença é negativa e transforma em um numero positivo
+        }else if(qntFalta < 0){
+            qntFalta *= -1;
+        // If que informa a quantidade de pontos/ponto para alcançar a média 7
+            if (qntFalta > 1){
+                alert("O aluno precisará fazer "+qntFalta+" pontos na terceira prova para alcançar a média 7.");
+            }else{
+                alert("O aluno precisará fazer "+qntFalta+" ponto na terceira prova para alcançar a média 7.");
+            }
+        }    
+    </script>
+</body>
+</html>

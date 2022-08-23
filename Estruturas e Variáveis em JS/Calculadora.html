@@ -1,0 +1,124 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculadora</title>
+    
+    <!-- Estilizando a página -->
+
+    <style>
+
+        h3{
+            margin-top: -6px;
+            text-align: center;
+        }
+        .bloco{
+            border: 1px solid;
+            padding: 5px;
+            margin-right: 55rem;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Bloco que vai conter a calculadora -->
+    <div class="bloco">
+        <h3>Calculadora SofTex</h3>
+        <form>
+            
+            <!-- Input que vai receber o Primeiro numero -->
+            <input id="n1" type="text" placeholder="Primeiro número">
+            
+            <!-- Select que pega o tipo de operação-->
+            <select name="operacao" id="operacao">
+                <option value="">Operação</option>
+                <option value="+" value="+">+</option>
+                <option value="-" value="-">-</option> 
+                <option value="*" value="*">*</option>
+                <option value="/" value="/">/</option>
+            </select>    
+            <!-- Input que vai receber o segundo numero -->
+            <input id="n2" type="text" placeholder="Segundo número">
+
+            <!-- Butão calcular que vai chamar a função calculadora -->
+            <input type="button" value="Calcular" onclick="calculadora()">
+            
+            <br>
+            <br>
+            
+            <!-- Paragrafo que mostra o resultado do calculo -->
+            <p id="resultado">Resultado: </p>
+            <!-- Paragrafo que mostrarará o módulo da divisão -->
+            <p id="mod"></p>
+
+        </form>
+    </div>
+
+    <script>
+
+        // Funçao que limpa o campo dos números que serão calculados
+        function limparCampo(){
+            document.getElementById("resultado").innerHTML = "Resultado: ";
+            document.getElementById("mod").innerHTML = "";
+        }
+        
+        // Função principal do site
+        function calculadora() {  
+            let num1 = parseInt(document.getElementById("n1").value); // Pegando valor do input numero1
+            let num2 = parseInt(document.getElementById("n2").value); // Pegando valor do input numero2
+            let select = document.getElementById("operacao") //Criando uma variável para o select do html
+            let op = select.options[select.selectedIndex].value; // Atribuindo o valor do select operacao a uma variavel
+            let restoDiv // Variável que vai receber o módulo da divisão
+            let resultado; // Variável que recebe os resultados das operações
+            
+            if(op == '+'){
+                
+                limparCampo()
+                resultado = num1 + num2;
+            
+                document.getElementById("resultado").innerHTML += resultado;
+
+            }else if(op == '-'){
+    
+                limparCampo()
+                resultado = num1 - num2;
+            
+                document.getElementById("resultado").innerHTML += resultado;
+
+            }else if(op == '*'){
+                
+                limparCampo()
+                resultado = num1 * num2;
+            
+                document.getElementById("resultado").innerHTML += resultado;
+
+            }else if(op == '/'){
+                
+                limparCampo()
+
+                resultado = num1 / num2;
+                document.getElementById("resultado").innerHTML += resultado;
+                
+                
+                restoDiv = num1 % num2;
+
+                if(restoDiv != 0){
+
+                    document.getElementById("mod").innerHTML += "O resto da divisão foi: " + restoDiv;
+                
+                }
+            //Else parar "tratar" erro de operador.
+            }else{
+                
+                resultado = "Operação inválida!"
+                
+                document.getElementById("resultado").innerHTML += resultado;
+            }
+        }
+    </script>
+    
+</body>
+</html
+
