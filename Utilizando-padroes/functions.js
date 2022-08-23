@@ -1,4 +1,4 @@
-// Função sem receber parametros e sem retorno.
+// Função que não recebe parametros e não tem retorno.
 function falarNome(){
     console.log("Eu sou uma apresentação genérica");
 }
@@ -8,7 +8,7 @@ function soma(a, b){
     return a + b;
 }
 
-// Arrow function que recebe dois parametros e retorna a diferença dos dois números.
+// Arrow function que recebe dois parametros e retornará a diferença entre dois números.
 const subtração = (a , b) => a - b;
 
 //Atribuindo às variaveis, o retorno das respectivas funções.
