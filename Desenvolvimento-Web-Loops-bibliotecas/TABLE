@@ -1,0 +1,48 @@
+mysql -h localhost -u root -p -- Iniciando o MySql no CMD
+
+SELECT * FROM usuarios; -- Acessando todos os dados da tabela "usuarios"
+SELECT * FROM usuarios WHERE idade >=30; -- Busca somente os usuarios que tenham mais de 30 anos.
+SELECT * FROM usuarios WHERE nome = "Denys" -- Busca somente os usuarios que tenham o nome Denys.
+SELECT nome FROM usuarios; -- Retorna apenas a coluna nome dos usuários
+DELETE FROM usuarios WHERE noma = "Ivson" -- Deleta linha onde contenha o nome Ivson.
+DELETE FROM usuarios; -- Deleta a tabela inteira.
+
+UPDATE usuarios SET nome = "Marcelo" WHERE nome = "Marcelo Henrique Silva dos Santos";
+
+CREATE TABLE usuarios(
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    idade INT
+);
+
+
+INSERT INTO usuarios(nome, email, idade) VALUES(
+
+    "Marcelo Henrique Silva dos Santos",
+    "Marcelo-santos@softex.com.br",
+    30
+
+);
+
+
+INSERT INTO usuarios(nome, email, idade) VALUES(
+
+    "Nícolas Gomes",
+    "nick-gomes@softex.com.br",
+    26
+);
+
+INSERT INTO usuarios(nome, email, idade) VALUES(
+    "Denys",
+    "Denys-tinder@softex.com.br",
+    21
+);
+
+
+INSERT INTO usuarios(idade, email, nome) VALUES(
+
+    32,
+    "Ivson",
+    "Ivson@softex.com.br"
+
+);
