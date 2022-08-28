@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize'); // Fazendo o import do sequelize. 
+const Sequelize = require('sequelize'); // Pegando o módulo do sequelize. 
 
 // Criando objeto "sequelize" passando o nome da tabela/banco de dados, o usuário, a senha, o host e o banco de dados usado.
 const sequelize = new Sequelize('bancosoftex', 'root', 'mugiwara123', {
